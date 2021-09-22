@@ -44,28 +44,41 @@
             <input class="inputs_rsvp" placeholder="email" type="email" name="email_rsvp" id="email_rsvp">
 
           </div>
-          <button type="submit" style="border: none; background: none; cursor: pointer" >
+          <button type="submit" style="border: none; background: none; cursor: pointer"
+<!--                  onclick="" put something for wipe/confirmation here-->
+          >
             <img src="img/rsvp_ce_4.png" alt="rsvp" style="width: 50px; height: auto;">
           </button>
         </div>
       </form>
     </div>
   </div>
+  <script>
+    function rsvp_submit() {
 
+
+    }
+  </script>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script><script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script>
 
+  </script>
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbwtxWEV1qYWqqFhUNO7LTI8vEci-iEvo7HDuHb_kcVjaZBniSK_UAHrTKpadKS3NbcSoQ/exec'
       const form = document.forms['rsvp_form']
-
+      // wipe();
       form.addEventListener('submit', e => {
         e.preventDefault()
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
           .then(response => console.log('Success!', response))
+          .then(document.forms['form_name'].reset())
           .catch(error => console.error('Error!', error.message))
       })
+
+
+
     </script>
 
 </body>
