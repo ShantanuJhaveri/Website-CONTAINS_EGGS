@@ -29,14 +29,19 @@
   <link href="img/webclip.png" rel="apple-touch-icon">
 </head>
 
-<body style="background: antiquewhite">
+<body>
 
   <!-- Add your site or application content here -->
-  <div class="base" style="background: white; fill: white">
-
-    <div class="container" style="background: white; fill: white">
-      <p style="margin-top: 0px; margin-bottom: 5px">rsvp-tiny_dorm_oct_3</p>
-      <form name="rsvp_form">
+  <div>
+    <div class="container_2">
+      <p>Welcome to the show. RSVP - 10 dollar tickets / free drinks / we'll email you</p>
+    </div>
+    <div class="container_3" id="sucess">
+      <p>join the waitlist</p>
+    </div>
+    <div class="container">
+      <p style="margin-top: 0px; margin-bottom: 5px">rsvp-tiny_dorm_oct_24</p>
+      <form name="rsvp_form", id="rsvp_formm">
         <div class="flex-container">
           <div class="inputs_field">
 
@@ -73,8 +78,13 @@
         e.preventDefault()
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
           .then(response => console.log('Success!', response))
-          .then(document.forms['form_name'].reset())
+          .then(document.forms['rsvp_form'].reset())
           .catch(error => console.error('Error!', error.message))
+
+      })
+
+      form.addEventListener('submit', e => {
+        e.getElementById('rsvp_formm').reset()
       })
 
 

@@ -36,11 +36,27 @@ html {
   padding-top: 20px;
   fill: antiquewhite;
 }
+
+.container_2{
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Roboto Mono", serif;
+}
+
+.container_3{
+  position: absolute;
+  top: 32%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Roboto Mono", serif;
+}
+
 .inputs_rsvp{
   margin: 5px;
 
 }
-
 .flex-container{
   display: flex;
   flex-direction: row;
