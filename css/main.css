@@ -39,7 +39,7 @@ html {
 
 .container_2{
   position: absolute;
-  top: 32%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: "Roboto Mono", serif;
