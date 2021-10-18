@@ -34,14 +34,16 @@
   <!-- Add your site or application content here -->
   <div>
     <div class="container_2">
-      <p>Welcome to the show. RSVP - 10 dollar tickets / free drinks / we'll email you</p>
-    </div>
-    <div class="container_3" id="sucess">
-      <p>join the waitlist</p>
+      <p>welcome to the show.</p>
+      <p>RSVP 10 dollar tickets</p>
+      <p>free drinks</p>
+      <p>we'll email you</p>
+      <p>dont fuck up your email</p>
+      <p id="sucess" style="display: none; color: lightseagreen"> sucess, youre in.</p>
     </div>
     <div class="container">
       <p style="margin-top: 0px; margin-bottom: 5px">rsvp-tiny_dorm_oct_24</p>
-      <form name="rsvp_form", id="rsvp_formm">
+      <form name="rsvp_form", id="rsvp_form">
         <div class="flex-container">
           <div class="inputs_field">
 
@@ -79,13 +81,14 @@
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
           .then(response => console.log('Success!', response))
           .then(document.forms['rsvp_form'].reset())
+          .then(document.getElementById('sucess').style.display = 'block')
           .catch(error => console.error('Error!', error.message))
 
       })
 
-      form.addEventListener('submit', e => {
-        e.getElementById('rsvp_formm').reset()
-      })
+      // form.addEventListener('submit', e => {
+      //   e.getElementById('rsvp_form').reset()
+      // })
 
 
 
