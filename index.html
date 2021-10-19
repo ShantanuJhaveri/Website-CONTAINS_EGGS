@@ -40,7 +40,9 @@
       <p>welcome to the show.</p>
       <p>RSVP 10 dollar tickets | free drinks</p>
       <p>we'll email you tomorrow:3</p>
-      <p id="sucess" style="display: none; color: lightseagreen"> sucess, youre on the waitlist.</p>
+      <p id="sucess" style="display: none; color: orangered">unfortunately, we're sold out.</p>
+      <p id="sucess_2" style="display: none; color: orangered">we put you on the waitlist.</p>
+
     </div>
     <div class="container">
       <p style="margin-top: 0px; margin-bottom: 5px">rsvp-tiny_dorm_oct_24</p>
@@ -83,6 +85,7 @@
           .then(response => console.log('Success!', response))
           .then(document.forms['rsvp_form'].reset())
           .then(document.getElementById('sucess').style.display = 'block')
+          .then(document.getElementById('sucess_2').style.display = 'block')
           .catch(error => console.error('Error!', error.message))
 
       })
