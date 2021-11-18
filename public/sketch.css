@@ -1,0 +1,11 @@
+body{
+	background-color: #fafafa;
+	margin: 0px;
+	overflow: hidden;
+}
+
+h1 {
+	color: #fff;
+	font-size: 25px;
+	/* size: 10px; */
+}
