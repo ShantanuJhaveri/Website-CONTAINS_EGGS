@@ -1,17 +1,17 @@
 {
-  "name": " ",
-  "version": "0.0.1",
-  "description": "",
-  "keywords": "",
-  "license": "",
-  "author": "",
+  "name": "conquest-websocket",
+  "version": "1.0.0",
+  "description": "Websocket for conquest projections",
+  "main": "Server_Simple.js",
   "scripts": {
-    "build": "parcel build index.html",
-    "dev": "parcel index.html --open",
-    "start": "npm run build && npm run dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+  "author": "Shantanu Jhaveri",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node": "^17.1.0",
+    "socket.io": "^4.4.0"
   }
 }
