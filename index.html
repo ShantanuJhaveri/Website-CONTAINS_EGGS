@@ -38,15 +38,15 @@
   <div class="bigflex">
     <div class="container_2">
       <p>welcome to the show.</p>
-      <p>RSVP 10 dollar tickets | free drinks</p>
+      <p>RSVP 15 dollar tickets | free drinks</p>
       <p>we'll DM you tomorrow from @containseggs</p>
-      <p id="sucess_0" style="display: none; color: green">sucess, we put you on our list.</p>
+      <p id="sucess_0" style="display: none; color: green">sucess, we put you on our rsvp list.</p>
       <p id="sucess_1" style="display: none; color: orangered">unfortunately, we're sold out.</p>
       <p id="sucess_2" style="display: none; color: orangered">we put you on the waitlist.</p>
 
     </div>
     <div class="container">
-      <p style="margin-top: 0px; margin-bottom: 5px">rsvp-tiny_dorm_nov_21</p>
+      <p style="margin-top: 0px; margin-bottom: 5px">rsvp-tiny_dorm_dec_5</p>
       <form name="rsvp_form", id="rsvp_form">
         <div class="flex-container">
           <div class="inputs_field">
@@ -77,7 +77,7 @@
 
   </script>
     <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbwTu1UjwHXMk6eAMy5lMSAkRrAUyXRRykSG_MbSh0zaGXFnycEwN3mMf8cEndvShXbXIw/exec'
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbw39uVkRUbKdQv0uMBpDr-MSS3h8I7hhipgb8ImHHadZo8S-s579AVUgVcDXqIMDZ4yKw/exec'
       const form = document.forms['rsvp_form']
       // wipe();
       form.addEventListener('submit', e => {
@@ -86,8 +86,8 @@
           .then(response => console.log('Success!', response))
           .then(document.forms['rsvp_form'].reset())
           // .then(document.getElementById('sucess_0').style.display = 'block')
-          .then(document.getElementById('sucess_1').style.display = 'block')
-          .then(document.getElementById('sucess_2').style.display = 'block')
+          .then(document.getElementById('sucess_0').style.display = 'block')
+          // .then(document.getElementById('sucess_2').style.display = 'block')
           .catch(error => console.error('Error!', error.message))
 
       })
