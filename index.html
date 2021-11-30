@@ -1,0 +1,105 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>contains_eggs-llc</title>
+  <meta content="loud videos, bold tech and tiny concerts." name="description">
+  <meta content="Contains: Eggs LLC" property="og:title">
+  <meta content="loud videos, bold tech and tiny concerts." property="og:description">
+  <meta content="summary" name="twitter:card">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+
+  <link href="img/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="img/webclip.png" rel="apple-touch-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Add your site or application content here -->
+  <div class="bigflex">
+    <div class="container_2">
+      <p>welcome to the show.</p>
+      <p>RSVP 15 dollar tickets | free drinks</p>
+      <p>we'll DM you tomorrow from @containseggs</p>
+      <p id="sucess_0" style="display: none; color: green">sucess, we put you on our rsvp list.</p>
+      <p id="sucess_1" style="display: none; color: orangered">unfortunately, we're sold out.</p>
+      <p id="sucess_2" style="display: none; color: orangered">we put you on the waitlist.</p>
+
+    </div>
+    <div class="container">
+      <p style="margin-top: 0px; margin-bottom: 5px">rsvp-tiny_dorm_dec_5</p>
+      <form name="rsvp_form", id="rsvp_form">
+        <div class="flex-container">
+          <div class="inputs_field">
+
+            <input class="inputs_rsvp" placeholder="full name" name="name_rsvp" id="name_rsvp">
+            <input class="inputs_rsvp" placeholder="instagram" name="email_rsvp" id="email_rsvp">
+
+          </div>
+          <button type="submit" style="border: none; background: none; cursor: pointer"
+<!--                  onclick="" put something for wipe/confirmation here-->
+          >
+            <img src="img/rsvp_ce_4.png" alt="rsvp" style="width: 50px; height: auto;">
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script>
+    function rsvp_submit() {
+
+
+    }
+  </script>
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script><script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script>
+
+  </script>
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbw39uVkRUbKdQv0uMBpDr-MSS3h8I7hhipgb8ImHHadZo8S-s579AVUgVcDXqIMDZ4yKw/exec'
+      const form = document.forms['rsvp_form']
+      // wipe();
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .then(document.forms['rsvp_form'].reset())
+          // .then(document.getElementById('sucess_0').style.display = 'block')
+          .then(document.getElementById('sucess_0').style.display = 'block')
+          // .then(document.getElementById('sucess_2').style.display = 'block')
+          .catch(error => console.error('Error!', error.message))
+
+      })
+
+      // form.addEventListener('submit', e => {
+      //   e.getElementById('rsvp_form').reset()
+      // })
+
+
+
+    </script>
+
+</body>
+
+</html>
