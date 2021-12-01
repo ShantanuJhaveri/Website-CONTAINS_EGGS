@@ -85,9 +85,9 @@
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
           .then(response => console.log('Success!', response))
           .then(document.forms['rsvp_form'].reset())
-          .then(document.getElementById('sucess_0').style.display = 'block')
-          // .then(document.getElementById('sucess_1').style.display = 'block')
-          // .then(document.getElementById('sucess_2').style.display = 'block')
+          // .then(document.getElementById('sucess_0').style.display = 'block')
+          .then(document.getElementById('sucess_1').style.display = 'block')
+          .then(document.getElementById('sucess_2').style.display = 'block')
           .catch(error => console.error('Error!', error.message))
 
       })
